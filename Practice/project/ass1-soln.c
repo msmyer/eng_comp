@@ -46,62 +46,62 @@
 #define MAXDISTANCE 6300.0
 #define FLIGHTSPEED 4.2
 
-
-struct delivery{
+// Delivery struct that takes the values of the Delivery
+struct Delivery{
     double xcoord;
     double ycoord;
     double mass;
 };
 
-struct batteryuse{
+// battery use values
+struct BatteryUse{
     double batteryout;
     double batteryin;
 };
 
-
-double distance_calc(struct delivery point1, struct delivery point2)
-    {
-    return(sqrt((point2.xcoord-point1.xcoord)*(point2.xcoord-point1.xcoord)+
-    ((point2.ycoord-point1.ycoord)*(point2.ycoord-point1.ycoord))));
+// distance function calculator (from difference of two points)
+double distance_calc(struct Delivery delivery1, struct Delivery delivery2){
+    return(sqrt((delivery2.xcoord-delivery1.xcoord)*(delivery2.xcoord-delivery1.xcoord)+
+    ((delivery2.ycoord-delivery1.ycoord)*(delivery2.ycoord-delivery1.ycoord))));
     }
 
- struct batteryuse battery_usage(struct delivery point1, struct delivery point2)
-         {
-    struct batteryuse battery;
-    double distance = distance_calc(point1,point2);
-    battery.batteryout =(distance/(MAXDISTANCE/(DRONEWEIGHT+point2.mass)))*100;
+
+/**
+ * This is a constructor for BatteryUse struct
+ * @param delivery1
+ * @param delivery2
+ * @return (battery)
+ */
+
+
+ struct BatteryUse BatteryUse(struct Delivery delivery1, struct Delivery delivery2){
+    struct BatteryUse battery;
+    double distance = distance_calc(delivery1,delivery2);
+    battery.batteryout =(distance/(MAXDISTANCE/(DRONEWEIGHT+delivery2.mass)))*100;
     battery.batteryin =(distance/(MAXDISTANCE/(DRONEWEIGHT)))*100;
     return (battery);
-
 }
 
-int main(int argc, char *argv[])
-{
-
+int main(int argc, char *argv[]){
     char ch;
-    struct delivery deliveries[MAX];
+    struct Delivery deliveries[MAX];
     int iterator = 0,i =0, amountofbatteriers =1;
     double mass_tmp = 0, total_mass = 0,charge=STARTCHARGE,totalflight=0;
-    struct delivery origin;
+    struct Delivery origin;
 
     origin.xcoord = 0;
     origin.ycoord = 0;
     origin.mass =0;
 
 
-
-    while (scanf("%c", &ch) != EOF)
-    {
-
-
-        if (ch == '\n')
-        {
-           break;
-        }
+// scan for ch & break (throw away the first line from TSV)
+    while (scanf("%c", &ch) != EOF){
+        if (ch == '\n')break;
     }
 
-    while (scanf("%lf%lf%lf", &deliveries[iterator].xcoord,&deliveries[iterator].ycoord, &deliveries[iterator].mass)!=EOF)
-    {
+// Continue to scan into Delivery struct for each line
+    while (scanf("%lf%lf%lf", &deliveries[iterator].xcoord,
+            &deliveries[iterator].ycoord, &deliveries[iterator].mass)!=EOF){
         iterator++;
     }
 
@@ -114,8 +114,6 @@ int main(int argc, char *argv[])
 
 
     for(i=0;i< iterator; i++) {
-
-
         mass_tmp = deliveries[i].mass;
         total_mass += mass_tmp;
 
@@ -132,29 +130,25 @@ int main(int argc, char *argv[])
                    deliveries[i].xcoord, deliveries[i].ycoord,
                    deliveries[i].mass);
             printf("S1, total to deliver: %.2lf kg\n\n", total_mass);
-
         }
-
     }
 
     //Section 2
 
-    for(i =0; i< iterator; i++)
-    {
+    for(i =0; i< iterator; i++){
 
-        struct batteryuse battery = battery_usage(origin,deliveries[i]);
-        if(charge<(battery.batteryout+battery.batteryin))
-        {
+        struct BatteryUse battery = BatteryUse(origin,deliveries[i]);
+        if(charge<(battery.batteryout+battery.batteryin)){
             printf("S2, change the battery\n");
-            charge = 100;
+            charge = STARTCHARGE;
             amountofbatteriers += 1;
         }
 
-        printf("S2, package= %2d, distance= %5.1lfm, battery out=%4.1lf%%, battery ret=%4.1lf%%\n",i, distance_calc(origin, deliveries[i]),
+        printf("S2, package= %2d, distance= %5.1lfm, battery out=%4.1lf%%, "
+               "battery ret=%4.1lf%%\n",i, distance_calc(origin, deliveries[i]),
               battery.batteryout,battery.batteryin);
+
         charge-=(battery.batteryout+battery.batteryin);
-
-
         totalflight += 2.0*distance_calc(origin,deliveries[i]);
 
     }

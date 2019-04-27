@@ -111,124 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named vector
+# Target rules for targets named ass1-soln
 
 # Build rule for target.
-vector: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vector
-.PHONY : vector
+ass1-soln: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ass1-soln
+.PHONY : ass1-soln
 
 # fast build rule for target.
-vector/fast:
-	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/build
-.PHONY : vector/fast
+ass1-soln/fast:
+	$(MAKE) -f CMakeFiles/ass1-soln.dir/build.make CMakeFiles/ass1-soln.dir/build
+.PHONY : ass1-soln/fast
 
-#=============================================================================
-# Target rules for targets named main
+ass1-soln.o: ass1-soln.c.o
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named project
-
-# Build rule for target.
-project: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 project
-.PHONY : project
-
-# fast build rule for target.
-project/fast:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/build
-.PHONY : project/fast
-
-main.o: main.c.o
-
-.PHONY : main.o
+.PHONY : ass1-soln.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o
-.PHONY : main.c.o
+ass1-soln.c.o:
+	$(MAKE) -f CMakeFiles/ass1-soln.dir/build.make CMakeFiles/ass1-soln.dir/ass1-soln.c.o
+.PHONY : ass1-soln.c.o
 
-main.i: main.c.i
+ass1-soln.i: ass1-soln.c.i
 
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.s
-.PHONY : main.c.s
-
-projectv2.o: projectv2.c.o
-
-.PHONY : projectv2.o
-
-# target to build an object file
-projectv2.c.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/projectv2.c.o
-.PHONY : projectv2.c.o
-
-projectv2.i: projectv2.c.i
-
-.PHONY : projectv2.i
+.PHONY : ass1-soln.i
 
 # target to preprocess a source file
-projectv2.c.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/projectv2.c.i
-.PHONY : projectv2.c.i
+ass1-soln.c.i:
+	$(MAKE) -f CMakeFiles/ass1-soln.dir/build.make CMakeFiles/ass1-soln.dir/ass1-soln.c.i
+.PHONY : ass1-soln.c.i
 
-projectv2.s: projectv2.c.s
+ass1-soln.s: ass1-soln.c.s
 
-.PHONY : projectv2.s
-
-# target to generate assembly for a file
-projectv2.c.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/projectv2.c.s
-.PHONY : projectv2.c.s
-
-projectv3.o: projectv3.c.o
-
-.PHONY : projectv3.o
-
-# target to build an object file
-projectv3.c.o:
-	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/projectv3.c.o
-.PHONY : projectv3.c.o
-
-projectv3.i: projectv3.c.i
-
-.PHONY : projectv3.i
-
-# target to preprocess a source file
-projectv3.c.i:
-	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/projectv3.c.i
-.PHONY : projectv3.c.i
-
-projectv3.s: projectv3.c.s
-
-.PHONY : projectv3.s
+.PHONY : ass1-soln.s
 
 # target to generate assembly for a file
-projectv3.c.s:
-	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/projectv3.c.s
-.PHONY : projectv3.c.s
+ass1-soln.c.s:
+	$(MAKE) -f CMakeFiles/ass1-soln.dir/build.make CMakeFiles/ass1-soln.dir/ass1-soln.c.s
+.PHONY : ass1-soln.c.s
 
 # Help Target
 help:
@@ -237,19 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... vector"
+	@echo "... ass1-soln"
 	@echo "... edit_cache"
-	@echo "... main"
-	@echo "... project"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... projectv2.o"
-	@echo "... projectv2.i"
-	@echo "... projectv2.s"
-	@echo "... projectv3.o"
-	@echo "... projectv3.i"
-	@echo "... projectv3.s"
+	@echo "... ass1-soln.o"
+	@echo "... ass1-soln.i"
+	@echo "... ass1-soln.s"
 .PHONY : help
 
 
