@@ -1,0 +1,10 @@
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/tute2.dir
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/main.dir
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/test.dir
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/isprime.dir
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/axb.dir
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/workshop2.dir
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/change_calc.dir
+/home/max/Code/eng_comp/workshops/week2/cmake-build-debug/CMakeFiles/basic_change_calc.dir

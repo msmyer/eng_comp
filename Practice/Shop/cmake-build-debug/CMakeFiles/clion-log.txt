@@ -1,0 +1,4 @@
+/home/max/Tools/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/cmake -G "CodeBlocks - Unix Makefiles" /home/max/Code/eng_comp/Practice/Shop
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/max/Code/eng_comp/Practice/Shop/cmake-build-debug

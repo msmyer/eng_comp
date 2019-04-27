@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/tute2.dir/tute2.c.o  -o tute2 

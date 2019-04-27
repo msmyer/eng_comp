@@ -1,0 +1,16 @@
+/home/max/Tools/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/cmake -G "CodeBlocks - Unix Makefiles" /home/max/Code/eng_comp/Practice/project
+-- Configuring done
+CMake Error at CMakeLists.txt:7 (add_executable):
+  Cannot find source file:
+
+    projectv2.c
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:7 (add_executable):
+  No SOURCES given to target: project
+
+
+-- Build files have been written to: /home/max/Code/eng_comp/Practice/project/cmake-build-debug

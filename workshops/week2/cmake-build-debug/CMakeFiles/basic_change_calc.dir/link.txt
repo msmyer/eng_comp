@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/basic_change_calc.dir/basic_change_calc.c.o  -o basic_change_calc 

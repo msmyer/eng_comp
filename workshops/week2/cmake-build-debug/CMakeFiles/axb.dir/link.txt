@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/axb.dir/axb.c.o  -o axb 

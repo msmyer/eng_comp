@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/change_calc.dir/change_calc.c.o  -o change_calc -lm 

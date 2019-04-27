@@ -1,0 +1,6 @@
+/home/max/Code/eng_comp/Practice/exercises/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/max/Code/eng_comp/Practice/exercises/cmake-build-debug/CMakeFiles/book.dir
+/home/max/Code/eng_comp/Practice/exercises/cmake-build-debug/CMakeFiles/test.dir
+/home/max/Code/eng_comp/Practice/exercises/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/max/Code/eng_comp/Practice/exercises/cmake-build-debug/CMakeFiles/main.dir
+/home/max/Code/eng_comp/Practice/exercises/cmake-build-debug/CMakeFiles/savingsfunc.dir

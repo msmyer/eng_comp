@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/Shop.dir/src/change_calc.c.o CMakeFiles/Shop.dir/src/shopping_sim.c.o  -o Shop 

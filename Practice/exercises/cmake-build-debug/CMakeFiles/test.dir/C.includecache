@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/max/Code/eng_comp/Practice/exercises/test.c
+stdlib.h
+-
+stdio.h
+-
+stdio.h
+-
+stdlib.h
+-
+stdio.h
+-
+stdlib.h
+-
+stdio.h
+-
+stdlib.h
+-
+stdio.h
+-
+

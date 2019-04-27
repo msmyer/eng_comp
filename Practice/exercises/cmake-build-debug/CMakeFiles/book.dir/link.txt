@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/book.dir/book.c.o  -o book 

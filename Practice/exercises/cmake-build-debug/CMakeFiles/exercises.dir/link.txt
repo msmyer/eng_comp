@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/exercises.dir/main.c.o  -o exercises 

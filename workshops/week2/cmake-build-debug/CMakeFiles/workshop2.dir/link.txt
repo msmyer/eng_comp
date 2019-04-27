@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/workshop2.dir/workshop2.c.o  -o workshop2 
